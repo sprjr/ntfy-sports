@@ -28,7 +28,6 @@ record = page.find(class_="PageTitle-description")
 record_clean = record.get_text(strip=True)
 
 filtered_results = []
-next_game = None # Initialize this variable before the loop
 
 for date, team, time, home_or_away in zip(dates, teams, times, home_or_away):
     date_text = date.get_text(strip=True)
