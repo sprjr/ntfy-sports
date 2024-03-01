@@ -20,6 +20,7 @@ times = page.find_all(class_="CellGame")
 home_or_away = page.find_all(class_="CellLogoNameLockup-opposingPrefix")
 
 filtered_results = []
+next_game = None # Initialize this variable before the loop
 
 for date, team, time, home_or_away in zip(dates, teams, times, home_or_away):
     date_text = date.get_text(strip=True)
